@@ -13,9 +13,22 @@ def netto(brutto):
 
     return round(brutto - (emerytalne + rentowe + chorobowe + zdrowotne + zaliczka_na_PIT), 2)
 
+menu = {}
+menu['1'] = 'Kalkulator'
+menu['2'] = 'Wyjscie'
+while True:
+    options = menu.keys()
+    for x in options:
+        print(x,menu[x])
 
-print("Witaj w kalkulatorze placy netto/brutto")
-brutto = int(input("Kwota w brutto: "))
-netto = netto(brutto)
-print(f"Kwota netto wynosi: {netto}")
-print("Roznica miedzy kwotami brutto i netto wynosi:", round((brutto-netto), 2))
+    wybor = input('Podaj liczbe: ')
+    if wybor == '1':
+        print("Witaj w kalkulatorze placy netto/brutto")
+        brutto = int(input("Kwota w brutto: "))
+        netto = netto(brutto)
+        print(f"Kwota netto wynosi: {netto}")
+        print("Roznica miedzy kwotami brutto i netto wynosi:", round((brutto - netto), 2))
+    elif wybor == '2':
+        break
+    else:
+        print('Wybierz poprawna liczbe')
