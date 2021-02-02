@@ -44,4 +44,16 @@ print('''
 Witaj na Quizie informatycznym 
 sprawdzisz tutaj swoja wiedze z zakresu informatyki i Pythona
 ''')
-quiz()
+menu = {}
+menu['1'] = 'Quiz'
+menu['2'] = 'Wyjscie'
+while True:
+    options = menu.keys()
+    for x in options:
+        print(x,menu[x])
+
+    wybor = input('Wpisz numer: ')
+    if wybor == '1':
+        quiz()
+    if wybor == '2':
+        break
