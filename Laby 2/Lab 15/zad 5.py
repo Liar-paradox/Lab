@@ -15,13 +15,18 @@ class Hotel:
         self.utworz()
 
     def utworz(self):
-        print(self.liczba_pieter)
+        # print(self.liczba_pieter)
+        u = 0
         for y in range(self.pietra):
-            liczba_pok_piet = random.randint(1, self.liczba_pokoi - self.pietra)
-            for x in range(liczba_pok_piet):
+            j =  random.randint(1,self.liczba_pokoi - u)
+            # liczba_pok_piet = random.randint(1, self.liczba_pokoi - self.pietra)
+            u += j
+            for x in range(j):
                 self.liczba_pieter[y].append(x)
                 self.pokoje.append(x)
-        print(self.liczba_pieter)
+
+
+
 
     def wolne_pok(self):
         counter = 0
@@ -66,5 +71,5 @@ class Osoba:
 
 
 h1 = Hotel(4,14)
-h1.utworz()
-
+# h1.utworz()
+print(h1.liczba_pieter)
