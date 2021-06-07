@@ -18,7 +18,7 @@ class Hotel:
         # print(self.liczba_pieter)
         u = 0
         for y in range(self.pietra):
-            j =  random.randint(1,self.liczba_pokoi - u)
+            j =  random.randint(0,self.liczba_pokoi - u)
             # liczba_pok_piet = random.randint(1, self.liczba_pokoi - self.pietra)
             u += j
             for x in range(j):
